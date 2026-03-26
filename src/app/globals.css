@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+:root {
+    --background: 220 15% 6%;
+    --foreground: 210 20% 98%;
+    --border: 220 15% 20%;
+    --font-mono: "JetBrains Mono", monospace;
+    --font-sans: "Inter", system-ui, sans-serif;
+    --muted-foreground: 215 20% 55%
+}
+
+.bg-background {
+    background-color: hsl(var(--background));
+}
+
+.text-foreground {
+    color: hsl(var(--foreground))
+}
+
+.text-muted-foreground {
+    color: hsl(var(--muted-foreground))
+}
