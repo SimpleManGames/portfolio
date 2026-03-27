@@ -74,10 +74,20 @@ export default function Home() {
                 </div>
               </div>
             </header>
+            <main className="pt-24 lg:w-1/2 lg:py-24 space-y-24">
+              <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+                <div className="text-muted-background font-mono leading-relaxed">
+                  <p className="mb-6">
+                    I'm a Software Engineer driven by continuous learning
+                    and evolving for the challenges at hand. From games to
+                    training simulations to MedTech, I bring a focus on both
+                    user and developer experience to every project I work
+                    on.
+                  </p>
+                </div>
+              </section>
+            </main>
           </div>
-          <main>
-            
-          </main>
         </div>
       </div>
     </>
