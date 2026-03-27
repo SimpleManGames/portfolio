@@ -48,14 +48,8 @@ const experience = [
 export default function Home() {
   return (
     <>
-      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
       <div className="flex-1 relative">
-        <div className="fixed inset-0 z-[-1] size-full [mask-image:radial-gradient(ellipse_at_center,transparent,hsl(var(--background)))]" style={{
-          backgroundImage: "radial-gradient(rgb(37, 37, 37) 1px, transparent 1px)",
-          backgroundSize: "24px 24px"
-        }}></div>
-
-        <div className="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div className="mx-auto max-w-7xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
           <div className="lg:flex lg:justify-between lg:gap-4">
             <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
               <div>
@@ -85,6 +79,10 @@ export default function Home() {
                     on.
                   </p>
                 </div>
+              </section>
+
+              <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+                
               </section>
             </main>
           </div>

@@ -30,6 +30,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-950 text-zinc-100`}>
         <div className="flex flex-col min-h-screen mx-auto text-sm">
           {/* <Header /> */}
+          <div className="fixed inset-0 z-[-1] size-full mask-[radial-gradient(ellipse_at_center,transparent,hsl(var(--background)))]" style={{
+            backgroundImage: "radial-gradient(rgb(37, 37, 37) 1px, transparent 1px)",
+            backgroundSize: "24px 24px"
+          }}></div>
           {children}
           <Footer />
         </div>
