@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -66,11 +67,15 @@ export default function Home() {
                 <p className="mt-4 max-w-xs leading-normal text-muted-foreground font-mono">
                   Creating applications acrossing MedTech, Simulation and Gaming.
                 </p>
+                <div className="mt-4 flex items-center gap-1.5 text-muted-foreground">
+                  <Image src="/location-pin.svg" alt="Pin" width={24} height={24}></Image>
+                  <span className="text-sm">Seattle, WA</span>
+                </div>
               </div>
             </header>
           </div>
           <main>
-
+            
           </main>
         </div>
       </div>
