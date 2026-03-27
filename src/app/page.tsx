@@ -86,7 +86,7 @@ export default function Home() {
                   {experience.map((job) => (
                     <li
                       key={job.company}
-                      className="group flex flex-col sm:flex-row gap-2 sm:gap-8"
+                      className="group flex flex-col sm:flex-row gap-2 sm:gap-8 rounded-lg p-4 -mx-4 transition-colors hover:bg-zinc-800/50"
                     >
                       <div className="shrink-0 sm:w-36 text-sm text-muted-foreground font-mono pt-1">
                         {job.dates}
