@@ -1,30 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-type NavItem = { id: string; label: string };
+import { usePathname } from "next/navigation";
+import { sections } from "@/data/sections";
 
 export default function Nav() {
-  const [items, setItems] = useState<NavItem[]>([]);
-  const [activeId, setActiveId] = useState("");
+  const pathname = usePathname();
+  const [activeId, setActiveId] = useState(sections[0].id);
 
   useEffect(() => {
-    const sections = Array.from(
-      document.querySelectorAll<HTMLElement>("main section[id]"),
-    );
-
-    const discovered = sections.map((el) => ({
-      id: el.id,
-      label: el.id.charAt(0).toUpperCase() + el.id.slice(1),
-    }));
-
-    setItems(discovered);
-    if (discovered.length > 0) setActiveId(discovered[0].id);
+    // On sub-pages (e.g. /experience/proprio), highlight the matching nav section
+    const pathSection = pathname.split("/")[1];
+    if (pathSection && sections.some((item) => item.id === pathSection)) {
+      setActiveId(pathSection);
+      return;
+    }
 
     function onScroll() {
-      let current = discovered[0]?.id ?? "";
+      let current = sections[0].id;
 
-      for (const item of discovered) {
+      for (const item of sections) {
         const el = document.getElementById(item.id);
         if (!el) continue;
         if (window.scrollY >= el.offsetTop - 200) {
@@ -38,12 +33,12 @@ export default function Nav() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <nav className="mt-16 hidden lg:block">
       <ul className="space-y-4 text-sm font-mono uppercase tracking-widest">
-        {items.map((item) => (
+        {sections.map((item) => (
           <li key={item.id}>
             <a href={`/#${item.id}`} className="group flex items-center gap-3">
               <span
