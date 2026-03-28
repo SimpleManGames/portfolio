@@ -45,7 +45,7 @@ export default function Nav() {
       <ul className="space-y-4 text-sm font-mono uppercase tracking-widest">
         {items.map((item) => (
           <li key={item.id}>
-            <a href={`#${item.id}`} className="group flex items-center gap-3">
+            <a href={`/#${item.id}`} className="group flex items-center gap-3">
               <span
                 className={`inline-block h-2 w-2 rounded-full border transition-colors ${
                   activeId === item.id

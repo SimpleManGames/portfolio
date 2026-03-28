@@ -1,56 +1,30 @@
-import Link from "next/link";
+import Image from "next/image";
+import Nav from "@/components/nav";
 
 export default function Header() {
   return (
-    <header className="border-zinc-800 border-b h-14 flex items-center justify-between px-6">
-      <Link href="/" className="font-semibold tracking-tight">
-        Riley Smith
-      </Link>
-
-      <nav>
-        <ul className="flex items-center gap-5 text-sm text-zinc-400">
-          <li>
-            <Link href="/" className="hover:text-white transition-colors">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:text-white transition-colors">
-              About
-            </Link>
-          </li>
-          <li>
-            <a
-              href="https://rxresu.me/rileysmith/resume"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Resume
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/rileysmithdev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/rileysmith29"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              GitHub
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <header className="lg:fixed lg:py-24">
+      <div>
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          Riley Smith
+        </h1>
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-2xl">
+          Software Engineer | Game Developer
+        </h2>
+        <p className="mt-4 max-w-xs leading-normal text-muted-foreground font-mono">
+          Creating applications acrossing MedTech, Simulation and Gaming.
+        </p>
+        <div className="mt-4 flex items-center gap-1.5 text-muted-foreground">
+          <Image
+            src="/location-pin.svg"
+            alt="Pin"
+            width={18}
+            height={18}
+          ></Image>
+          <span className="text-sm">Seattle, WA</span>
+        </div>
+        <Nav />
+      </div>
     </header>
   );
 }
