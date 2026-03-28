@@ -6,9 +6,6 @@ export default function Page() {
   return (
     <main className="pt-24 lg:w-1/2 lg:ml-auto lg:py-24">
       <Section id="overview">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Project Overview
-        </h2>
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="text-muted-foreground font-mono leading-relaxed space-y-4 flex-1">
             <div>
@@ -49,13 +46,11 @@ export default function Page() {
       </Section>
 
       <Section id="contributions">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Contributions
-        </h2>
+        <div></div>
       </Section>
 
       <Section id="tech-stack">
-        <h2 className="text-2xl font-bold text-foreground mb-4">Tech Stack</h2>
+        <div></div>
       </Section>
     </main>
   );
