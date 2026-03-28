@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="border-zinc-800 border-b h-[56px] flex items-center justify-between px-6">
+    <header className="border-zinc-800 border-b h-14 flex items-center justify-between px-6">
       <Link href="/" className="font-semibold tracking-tight">
         Riley Smith
       </Link>
