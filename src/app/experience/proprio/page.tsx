@@ -1,10 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/section";
+import { experience } from "@/data/experience";
+
+const proprio = experience.find((e) => e.slug === "proprio-vision")!;
 
 export default function Page() {
   return (
     <main className="pt-24 lg:w-1/2 lg:ml-auto lg:py-24">
+      <div className="mb-16">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          {proprio.role}{" "}
+          <span className="text-muted-foreground">· {proprio.company}</span>
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground font-mono">
+          {proprio.dates}
+        </p>
+      </div>
+
       <Section id="overview">
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="text-muted-foreground font-mono leading-relaxed space-y-4 flex-1">
