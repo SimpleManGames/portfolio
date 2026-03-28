@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Section from "@/components/section";
 
 export default function Page() {
@@ -11,13 +12,20 @@ export default function Page() {
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="text-muted-foreground font-mono leading-relaxed space-y-4 flex-1">
             <div>
-              <Image
-                src="/experience/proprio/proprio_vision_icon.svg"
-                alt="Proprio"
-                className="float-left mt-4 ml-6 mr-6 mb-4 rounded-xl object-contain bg_w-48"
-                width={192}
-                height={192}
-              ></Image>
+              <Link
+                href="https://www.propriovision.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="float-left mt-4 ml-6 mr-6 mb-4"
+              >
+                <Image
+                  src="/experience/proprio/proprio_vision_icon.svg"
+                  alt="Proprio"
+                  className="rounded-xl object-contain bg_w-48"
+                  width={192}
+                  height={192}
+                />
+              </Link>
               <p>
                 Proprio Vision's mission was to deliver better outcomes for
                 patients — less radiation, smaller insurance bills, and quicker
