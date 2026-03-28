@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { experience } from "@/data/experience";
 import Nav from "@/components/nav";
+import Section from "@/components/section";
 
 export default function Home() {
   return (
@@ -33,10 +34,7 @@ export default function Home() {
               </div>
             </header>
             <main className="pt-24 lg:w-1/2 lg:py-24 space-y-24">
-              <section
-                id="about"
-                className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-              >
+              <Section id="about">
                 <div className="text-muted-background font-mono leading-relaxed">
                   <p className="mb-6">
                     I'm a Software Engineer driven by continuous learning and
@@ -49,12 +47,9 @@ export default function Home() {
                     the Greater Seattle Area.
                   </p>
                 </div>
-              </section>
+              </Section>
 
-              <section
-                id="experience"
-                className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-              >
+              <Section id="experience">
                 <ol className="space-y-12">
                   {experience.map((job) => (
                     <li
@@ -88,7 +83,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ol>
-              </section>
+              </Section>
             </main>
           </div>
         </div>
