@@ -84,6 +84,18 @@ export default function Home() {
                   ))}
                 </ol>
               </Section>
+
+              <Section id="projects">
+                <div></div>
+              </Section>
+
+              <Section id="tech">
+                <div></div>
+              </Section>
+
+              <Section id="contact">
+                <div></div>
+              </Section>
             </main>
           </div>
         </div>
