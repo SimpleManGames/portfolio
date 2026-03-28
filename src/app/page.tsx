@@ -1,38 +1,6 @@
 import Image from "next/image";
-
-const experience = [
-  {
-    company: "Proprio Vision",
-    role: "Software Engineer II",
-    dates: "Nov. 2023 — Jan. 2026",
-    description:
-      "Developed Med-Tech device software to assist surgeons with improved patient outcomes.",
-    tech: ["Unity3D", "C#", ".NET", "C++", "Python", "CI/CD", "Roslyn"],
-  },
-  {
-    company: "Smashing Ideas",
-    role: "Senior Software Engineer",
-    dates: "Mar. 2020 — Jan. 2023",
-    description:
-      "Built flight mechanic training simulations. Released four projects across three years, including a cloud-managed lesson creation tool and a local MQTT server.",
-    tech: ["Unity3D", "C#", "C++"],
-  },
-  {
-    company: "Neocade",
-    role: "Game Programmer",
-    dates: "Mar. 2017 — Sept. 2017",
-    description:
-      "Developed a point-and-click adventure game shipped on multiple platforms.",
-    tech: ["Unity3D", "C#"],
-  },
-  {
-    company: "Peeka VR",
-    role: "Unity VR Developer",
-    dates: "Jan. 2017 — Feb. 2017",
-    description: "Prototyped VR experiences and interactive applications.",
-    tech: ["Unity3D", "C#", "VR"],
-  },
-];
+import { experience } from "@/data/experience";
+import Nav from "@/components/nav";
 
 export default function Home() {
   return (
@@ -45,7 +13,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
                   Riley Smith
                 </h1>
-                <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl">
+                <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-2xl">
                   Software Engineer | Game Developer
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal text-muted-foreground font-mono">
@@ -56,11 +24,12 @@ export default function Home() {
                   <Image
                     src="/location-pin.svg"
                     alt="Pin"
-                    width={24}
-                    height={24}
+                    width={18}
+                    height={18}
                   ></Image>
                   <span className="text-sm">Seattle, WA</span>
                 </div>
+                <Nav />
               </div>
             </header>
             <main className="pt-24 lg:w-1/2 lg:py-24 space-y-24">
@@ -74,6 +43,10 @@ export default function Home() {
                     evolving for the challenges at hand. From games to training
                     simulations to MedTech, I bring a focus on both user and
                     developer experience to every project I work on.
+                  </p>
+                  <p>
+                    Lets chat if you're looking for a developer remotely or in
+                    the Greater Seattle Area.
                   </p>
                 </div>
               </section>
@@ -92,7 +65,7 @@ export default function Home() {
                         {job.dates}
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-medium text-foreground">
+                        <h3 className="text-lg font-bold text-foreground">
                           {job.role}{" "}
                           <span className="text-muted-foreground">
                             · {job.company}
@@ -105,7 +78,7 @@ export default function Home() {
                           {job.tech.map((t) => (
                             <li
                               key={t}
-                              className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300 font-mono"
+                              className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300 font-mono hover:bg-zinc-700"
                             >
                               {t}
                             </li>

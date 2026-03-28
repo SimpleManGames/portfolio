@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --background: 220 15% 6%;
     --foreground: 210 20% 98%;
@@ -9,18 +13,20 @@
     --muted-foreground: 215 20% 55%
 }
 
-.bg-background {
-    background-color: hsl(var(--background));
-}
+@layer base {
+    .bg-background {
+        background-color: hsl(var(--background));
+    }
 
-.text-foreground {
-    color: hsl(var(--foreground))
-}
+    .text-foreground {
+        color: hsl(var(--foreground));
+    }
 
-.text-muted-foreground {
-    color: hsl(var(--muted-foreground))
-}
+    .text-muted-foreground {
+        color: hsl(var(--muted-foreground));
+    }
 
-.leading-relaxed {
-    line-height: 1.625;
+    .leading-relaxed {
+        line-height: 1.625;
+    }
 }
