@@ -46,7 +46,33 @@ export default function Page() {
       </Section>
 
       <Section id="contributions">
-        <div></div>
+        <div className="text-muted-foreground font-mono leading-relaxed space-y-4 flex-1">
+          <p>
+            When I joined Proprio, the Front-End team was in the midst of a
+            large, multi-year effort to refactor the entire legacy codebase. I
+            came on to help push that work across the finish line. Within six
+            months, I had fully onboarded, taken ownership of my learning, and
+            become a key contributor to the team.
+          </p>
+          <p>
+            After the refactor wrapped up, I was entrusted to architect and
+            implement the full UI/UX for the next major feature — Intra-Op
+            Measurements, the flagship capability of the Paradigm system. I
+            hosted demos for surgeons and stakeholders, collaborated closely
+            with designers, and assisted with user studies and formative
+            evaluations. Together, we achieved our goal of becoming the first to
+            measure alignment without radiation.
+          </p>
+          <p>
+            With Intra-Op Measurements shipped, I took on the same end-to-end
+            role for our next initiative — Picasso. This effort focused on
+            improving surgical workflow and reducing reliance on the device
+            technician. We introduced a foot switch for independent surgeon
+            control, streamlined the registration workflow, and cut down on
+            required communication, resulting in a smoother, more efficient
+            experience.
+          </p>
+        </div>
       </Section>
 
       <Section id="tech-stack">
