@@ -1,11 +1,24 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/section";
+import Carousel from "@/components/carousel";
 import { experience } from "@/data/experience";
 
 const proprio = experience.find((e) => e.slug === "proprio-vision")!;
 
+function getCarouselImages() {
+  const dir = path.join(process.cwd(), "public/experience/proprio/carousel");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => /\.(jpg|jpeg|png|svg|webp|gif)$/i.test(f))
+    .map((f) => `/experience/proprio/carousel/${f}`);
+}
+
 export default function Page() {
+  const carouselImages = getCarouselImages();
   return (
     <main className="pt-24 lg:w-1/2 lg:ml-auto lg:py-24">
       <div className="mb-16">
@@ -90,6 +103,10 @@ export default function Page() {
 
       <Section id="tech-stack">
         <div></div>
+      </Section>
+
+      <Section id="gallery">
+        <Carousel images={carouselImages} />
       </Section>
     </main>
   );
