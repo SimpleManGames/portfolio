@@ -32,6 +32,19 @@ export default function Page() {
       </div>
 
       <Section id="overview">
+        <div className="mb-12">
+          <ul className="flex flex-wrap gap-2">
+            {proprio.tech.map((t) => (
+              <li
+                key={t}
+                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300 font-mono hover:bg-zinc-700"
+              >
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="text-muted-background font-mono leading-relaxed space-y-4 flex-1">
             <div>
@@ -99,10 +112,6 @@ export default function Page() {
             experience.
           </p>
         </div>
-      </Section>
-
-      <Section id="tech-stack">
-        <div></div>
       </Section>
 
       <Section id="gallery">

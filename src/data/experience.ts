@@ -16,7 +16,7 @@ export const experience: Experience[] = [
     dates: "Nov. 2023 — Jan. 2026",
     description:
       "Developed Med-Tech device software to assist surgeons with improved patient outcomes.",
-    tech: ["Unity3D", "C#", ".NET", "C++", "Python", "CI/CD", "Roslyn", "OptiTrack", "MVVM"],
+    tech: ["Unity3D", "C#", ".NET", "C++", "Python", "CI/CD", "Roslyn", "OptiTrack", "Git", "Github", "Github Actions", ],
     link: "/experience/proprio",
   },
   {
