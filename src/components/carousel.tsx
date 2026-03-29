@@ -33,13 +33,18 @@ export default function Carousel({ images }: CarouselProps) {
     <>
       <div className="flex flex-col items-center gap-2">
         <div className="relative w-full overflow-hidden rounded-lg">
-          <Image
-            src={images[index]}
-            alt={`Slide ${index + 1}`}
-            width={800}
-            height={450}
-            className="w-full h-auto object-contain"
-          />
+          {images.map((src, i) => (
+            <Image
+              key={src}
+              src={src}
+              alt={`Slide ${i + 1}`}
+              width={800}
+              height={450}
+              className={`w-full h-auto object-contain transition-opacity duration-500 ${
+                i === index ? "opacity-100" : "opacity-0 absolute inset-0"
+              }`}
+            />
+          ))}
           {images.length > 1 && (
             <>
               <button
