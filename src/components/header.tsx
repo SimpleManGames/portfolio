@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Nav from "@/components/nav";
 
 export default function Header() {
@@ -6,7 +7,7 @@ export default function Header() {
     <header className="lg:fixed lg:py-24">
       <div>
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Riley Smith
+          <Link href="/">Riley Smith</Link>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-2xl">
           Software Engineer | Game Developer
