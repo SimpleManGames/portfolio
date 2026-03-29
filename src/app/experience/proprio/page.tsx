@@ -33,7 +33,7 @@ export default function Page() {
 
       <Section id="overview">
         <div className="flex flex-col sm:flex-row gap-6">
-          <div className="text-muted-foreground font-mono leading-relaxed space-y-4 flex-1">
+          <div className="text-muted-background font-mono leading-relaxed space-y-4 flex-1">
             <div>
               <Link
                 href="https://www.propriovision.com/"
@@ -72,7 +72,7 @@ export default function Page() {
       </Section>
 
       <Section id="contributions">
-        <div className="text-muted-foreground font-mono leading-relaxed space-y-4 flex-1">
+        <div className="text-muted-background font-mono leading-relaxed space-y-4 flex-1">
           <p>
             When I joined Proprio, the Front-End team was in the midst of a
             large, multi-year effort to refactor the entire legacy codebase. I
