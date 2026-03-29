@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/section";
 import Carousel from "@/components/carousel";
+import TechPills from "@/components/tech-pills";
 import { experience } from "@/data/experience";
 
 const proprio = experience.find((e) => e.slug === "proprio-vision")!;
@@ -33,16 +34,7 @@ export default function Page() {
 
       <Section id="overview">
         <div className="mb-12">
-          <ul className="flex flex-wrap gap-2">
-            {proprio.tech.map((t) => (
-              <li
-                key={t}
-                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300 font-mono hover:bg-zinc-700"
-              >
-                {t}
-              </li>
-            ))}
-          </ul>
+          <TechPills tech={proprio.tech} />
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6">

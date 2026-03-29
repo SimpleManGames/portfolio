@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { experience } from "@/data/experience";
 import Section from "@/components/section";
+import TechPills from "@/components/tech-pills";
 
 export default function Home() {
   return (
@@ -39,16 +40,9 @@ export default function Home() {
                     <p className="mt-2 text-sm text-muted-foreground font-mono leading-relaxed">
                       {job.description}
                     </p>
-                    <ul className="mt-3 flex flex-wrap gap-2">
-                      {job.tech.map((t) => (
-                        <li
-                          key={t}
-                          className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300 font-mono hover:bg-zinc-700"
-                        >
-                          {t}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="mt-3">
+                      <TechPills tech={job.tech} />
+                    </div>
                   </div>
                 </>
               );
