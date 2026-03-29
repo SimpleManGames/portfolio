@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -48,16 +50,16 @@ export default function Nav() {
       <ul className="space-y-4 text-sm font-mono uppercase tracking-widest">
         {!isHome && (
           <li>
-            <a href="/" className="group inline-flex items-center gap-3">
+            <Link href="/" className="group inline-flex items-center gap-3">
               <span className="text-muted-foreground transition-colors group-hover:text-zinc-100">
                 &larr; Back
               </span>
-            </a>
+            </Link>
           </li>
         )}
         {items.map((item) => (
           <li key={item.id}>
-            <a
+            <Link
               href={`#${item.id}`}
               className="group inline-flex items-center gap-3"
             >
@@ -77,7 +79,7 @@ export default function Nav() {
               >
                 {item.label}
               </span>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
