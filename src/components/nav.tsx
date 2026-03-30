@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 type NavItem = { id: string; label: string };
@@ -12,6 +12,7 @@ export default function Nav() {
   const isHome = pathname === "/";
   const [items, setItems] = useState<NavItem[]>([]);
   const [activeId, setActiveId] = useState("");
+  const itemsRef = useRef<NavItem[]>([]);
 
   useEffect(() => {
     const sections = Array.from(
@@ -23,21 +24,23 @@ export default function Nav() {
       label: el.id.charAt(0).toUpperCase() + el.id.slice(1).replace(/-/g, " "),
     }));
 
-    setItems(discovered);
-    if (discovered.length > 0) setActiveId(discovered[0].id);
+    itemsRef.current = discovered;
+    requestAnimationFrame(() => setItems(discovered));
 
     function onScroll() {
-      let current = discovered[0]?.id ?? "";
+      const current = itemsRef.current;
+      if (current.length === 0) return;
+      let active = current[0].id;
 
-      for (const item of discovered) {
+      for (const item of current) {
         const el = document.getElementById(item.id);
         if (!el) continue;
         if (window.scrollY >= el.offsetTop - 200) {
-          current = item.id;
+          active = item.id;
         }
       }
 
-      setActiveId(current);
+      setActiveId(active);
     }
 
     onScroll();

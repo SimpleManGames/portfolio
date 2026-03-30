@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { experience } from "@/data/experience";
 import Section from "@/components/section";
 import ExperiencePill from "@/components/experience-pill";
@@ -9,13 +8,13 @@ export default function Home() {
       <Section id="about">
         <div className="text-muted-background font-mono leading-relaxed">
           <p className="mb-6">
-            I'm a Software Engineer driven by continuous learning and evolving
+            I&apos;m a Software Engineer driven by continuous learning and evolving
             for the challenges at hand. From games to training simulations to
             MedTech, I bring a focus on both user and developer experience to
             every project I work on.
           </p>
           <p>
-            Lets chat if you're looking for a developer remotely or in the
+            Lets chat if you&apos;re looking for a developer remotely or in the
             Greater Seattle Area.
           </p>
         </div>
