@@ -2,14 +2,9 @@ import fs from "fs";
 import path from "path";
 import Section from "@/components/section";
 import Carousel from "@/components/carousel";
-import { experience } from "@/data/experience";
-
 import Image from "next/image";
 import Link from "next/link";
-
-type ExperiencePageLayoutProps = {
-  slug: string;
-};
+import { Experience } from "@/type/experience";
 
 function getCarouselImages(slug: string) {
   const dir = path.join(process.cwd(), `public/experience/${slug}/carousel`);
@@ -20,9 +15,8 @@ function getCarouselImages(slug: string) {
     .map((f) => `/experience/${slug}/carousel/${f}`);
 }
 
-export default function ExperiencePageLayout({ slug }: ExperiencePageLayoutProps) {
-  const job = experience.find((e) => e.slug === slug)!;
-  const carouselImages = getCarouselImages(slug);
+export default function ExperiencePageLayout(job: Experience) {
+  const carouselImages = getCarouselImages(job.slug);
 
   return (
     <main className="pt-24 lg:w-1/2 lg:ml-auto lg:py-24">
