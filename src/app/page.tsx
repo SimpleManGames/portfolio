@@ -31,7 +31,7 @@ export default function Home() {
       </Section>
 
       <Section id="projects">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="space-y-12">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
