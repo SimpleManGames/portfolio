@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/nav";
+import SocialLinks from "@/components/social-links";
 
 export default function Header() {
   return (
@@ -24,6 +25,7 @@ export default function Header() {
           ></Image>
           <span className="text-sm">Seattle, WA</span>
         </div>
+        <SocialLinks />
         <Nav />
       </div>
     </header>
