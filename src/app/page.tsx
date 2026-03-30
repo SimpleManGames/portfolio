@@ -1,6 +1,8 @@
 import { experience } from "@/data/experience";
+import { projects } from "@/data/projects";
 import Section from "@/components/section";
 import ExperiencePill from "@/components/experience-pill";
+import ProjectCard from "@/components/project-card";
 
 export default function Home() {
   return (
@@ -29,7 +31,11 @@ export default function Home() {
       </Section>
 
       <Section id="projects">
-        <div></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
       </Section>
 
       <Section id="tech">
