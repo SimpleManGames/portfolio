@@ -7,7 +7,7 @@ import { experience } from "@/data/experience";
 import Image from "next/image";
 import Link from "next/link";
 
-type ExperienceLayoutProps = {
+type ExperiencePageLayoutProps = {
   slug: string;
 };
 
@@ -20,7 +20,7 @@ function getCarouselImages(slug: string) {
     .map((f) => `/experience/${slug}/carousel/${f}`);
 }
 
-export default function ExperienceLayout({ slug }: ExperienceLayoutProps) {
+export default function ExperiencePageLayout({ slug }: ExperiencePageLayoutProps) {
   const job = experience.find((e) => e.slug === slug)!;
   const carouselImages = getCarouselImages(slug);
 

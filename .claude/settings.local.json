@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.rileysmithdev.com)"
+      "WebFetch(domain:www.rileysmithdev.com)",
+      "Bash(git mv:*)"
     ]
   }
 }

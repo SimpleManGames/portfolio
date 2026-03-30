@@ -1,5 +1,5 @@
-import ExperienceLayout from "@/components/experience-layout";
+import ExperiencePageLayout from "@/components/experience-page-layout";
 
 export default function Page() {
-  return <ExperienceLayout slug="proprio-vision"></ExperienceLayout>;
+  return <ExperiencePageLayout slug="proprio-vision"></ExperiencePageLayout>;
 }
