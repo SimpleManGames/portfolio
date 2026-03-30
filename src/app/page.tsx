@@ -37,10 +37,6 @@ export default function Home() {
           ))}
         </div>
       </Section>
-
-      <Section id="tech">
-        <div></div>
-      </Section>
     </main>
   );
 }
