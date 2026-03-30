@@ -6,7 +6,7 @@ export type Experience = {
   description: string;
   tech: string[];
   website: string;
-  link: string;
+  portfolio_link: string;
   icon: string;
   overview: string[];
   contributions: string[];

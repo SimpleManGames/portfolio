@@ -5,6 +5,7 @@ import Carousel from "@/components/carousel";
 import Image from "next/image";
 import Link from "next/link";
 import { Experience } from "@/type/experience";
+import { ReactNode } from "react";
 
 function getCarouselImages(slug: string) {
   const dir = path.join(process.cwd(), `public/experience/${slug}/carousel`);
@@ -15,7 +16,10 @@ function getCarouselImages(slug: string) {
     .map((f) => `/experience/${slug}/carousel/${f}`);
 }
 
-export default function ExperiencePageLayout(job: Experience) {
+export default function ExperiencePageLayout(
+  job: Experience,
+  children?: ReactNode,
+) {
   const carouselImages = getCarouselImages(job.slug);
 
   return (
@@ -75,6 +79,7 @@ export default function ExperiencePageLayout(job: Experience) {
           ))}
         </div>
       </Section>
+
       {carouselImages.length > 0 && (
         <Section id="gallery">
           <Carousel images={carouselImages} />

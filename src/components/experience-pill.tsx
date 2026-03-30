@@ -5,7 +5,7 @@ export default function ExperiencePill(job: Experience) {
   return (
     <li key={job.company}>
       <Link
-        href={job.link}
+        href={job.portfolio_link}
         className="group flex flex-col sm:flex-row gap-2 sm:gap-8 rounded-lg p-4 -mx-4 transition-colors hover:bg-zinc-800/50"
       >
         <div className="shrink-0 sm:w-36 text-sm text-muted-foreground font-mono pt-1">
