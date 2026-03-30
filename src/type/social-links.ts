@@ -2,5 +2,5 @@ export type SocialLink = {
   platform: string;
   label: string;
   url: string;
-  icon: "github" | "linkedin" | "email";
+  icon: "github" | "linkedin" | "email" | "resume";
 };

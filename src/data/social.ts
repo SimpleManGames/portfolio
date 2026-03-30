@@ -19,4 +19,10 @@ export const socialLinks: SocialLink[] = [
     url: "mailto:riley.smith5345@gmail.com",
     icon: "email",
   },
+  {
+    platform: "Resume",
+    label: "Resume (PDF)",
+    url: "/RileySmithResume.pdf",
+    icon: "resume",
+  },
 ];
