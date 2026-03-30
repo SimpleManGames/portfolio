@@ -53,7 +53,7 @@ export default function Home() {
                 </>
               );
 
-              return job.link ? (
+              return (
                 <li key={job.company}>
                   <Link
                     href={job.link}
@@ -61,13 +61,6 @@ export default function Home() {
                   >
                     {content}
                   </Link>
-                </li>
-              ) : (
-                <li
-                  key={job.company}
-                  className="group flex flex-col sm:flex-row gap-2 sm:gap-8 rounded-lg p-4 -mx-4 transition-colors hover:bg-zinc-800/50"
-                >
-                  {content}
                 </li>
               );
             })}
