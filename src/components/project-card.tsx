@@ -9,8 +9,17 @@ export default function ProjectCard(project: Project) {
       rel="noopener noreferrer"
       className="group block rounded-lg overflow-hidden transition-colors hover:bg-zinc-800/50"
     >
-      <div className="p-4">
+      <div className="p-4 flex justify-between items-start">
         <h3 className="text-lg font-bold text-foreground">{project.title}</h3>
+        <Image
+          src="/external-link.svg"
+          alt="External link"
+          width={16}
+          height={16}
+          className="shrink-0 mt-1.5 invert opacity-50 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+        />
+      </div>
+      <div className="px-4 pb-4 -mt-2">
         <p className="mt-2 text-sm text-muted-foreground font-mono leading-relaxed">
           {project.description}
         </p>
