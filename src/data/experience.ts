@@ -7,7 +7,7 @@ export const experience: Experience[] = [
     role: "Software Engineer II",
     dates: "Nov. 2023 — Jan. 2026",
     description:
-      "Developed the software for a Class 2 Medical Device to assist surgeons during spinal surgery.",
+      "Developed software for a Class II medical device to assist surgeons during spinal surgery.",
     tech: ["Unity3D", "C#", ".NET", "C++", "Python", "CI/CD", "Roslyn", "OptiTrack", "Git", "Github", "Github Actions",],
     website: "https://www.propriovision.com/",
     portfolio_link: "/experience/proprio-vision",
@@ -29,16 +29,19 @@ export const experience: Experience[] = [
     role: "Senior Software Engineer",
     dates: "Mar. 2020 — Jan. 2023",
     description:
-      "Developed complex simulations of four Boeing aircraft to be used in an interactive training scenarios.",
+      "Developed complex simulations of four Boeing aircraft for use in interactive training scenarios.",
     tech: ["Unity3D", "C#", "C++"],
     website: "https://services.boeing.com/training-solutions/maintenance-training/maintenance-synthetic-trainer",
     portfolio_link: "/experience/smashing-ideas",
     icon: "/experience/smashing-ideas/mstcover.png",
-    overview: ["Maintenance Synthetic Trainer, also known as MST, is a software application created to train Flight Mechanics proper procedures in repairing and maintaining four different plane models. Accompanied by a cloud application called the Authoring Tool, which let instructors hand create lessons for use within their classroom."],
+    overview: [
+      "Maintenance Synthetic Trainer (MST) is a software application built to train flight mechanics on proper procedures for repairing and maintaining four different aircraft models.",
+      "Alongside MST, we developed the Authoring Tool — a cloud application that let instructors create custom lessons for use in their classrooms.",
+    ],
     contributions: [
-      "When I joined the team on Maintenance Synthetic Trainer I started out as a regular Software Engineer working solely on the front-end. Creating UI and improving the UX through Unity and C#. Shortly after joining I was assigned to do the complete process. Developing the simulation code and the Unity side to support the new system I would be making.",
-      "A year after creating systems I was promoted to Senior Software Engineer. Taking on new responsibilities and larger roles within the team. I started interacting with all fields of development in a more in depth manner. Helping Product Managers scope project size and sprints, discussing with Quality Assurance complex issues to quickly understand solutions or compromises and optimizing assets with the Art Director. Along side those I had become a leading voice in discussion and decision about the future of new feature implementation and how we approach new problems that many have arouse from a constantly evolving code base.",
-      "Worked on four projects, seven individual releases, over 3 years to the satisfaction of clients and shareholders. With live demonstrations to those individuals interested in our progress every two weeks to show new features and iterate on their feedback.",
+      "When I joined the MST team, I started as a Software Engineer focused on the front-end — building UI and improving UX in Unity with C#. Shortly after, I took on the full development process, writing the simulation code and the Unity systems to support it.",
+      "A year in, I was promoted to Senior Software Engineer. I took on broader responsibilities across the team: helping Product Managers scope sprints, working with QA to quickly identify solutions or compromises, and collaborating with the Art Director on asset optimization. I became a leading voice in decisions around new feature implementation and how we approached problems in a constantly evolving codebase.",
+      "Over three years, I contributed to four projects and seven individual releases. Every two weeks, we ran live demos for clients and stakeholders to showcase new features and iterate on their feedback.",
     ]
   },
   {
@@ -53,13 +56,13 @@ export const experience: Experience[] = [
     portfolio_link: "/experience/neocade",
     icon: "/experience/neocade/hiveswap-act-1-logo.png",
     overview: [
-      "Neocade is a small indie studio based out of Seattle Washington. We handled the development and release process of Hiveswap: Act 1.",
-      "Hiveswap: Act 1 is a point-and-click adventure game developed by What Pumpkin Games and released on Steam in September 2017. The game is set in the Homestuck universe, a popular webcomic, and follows the story of Joey Claire, a young girl who is transported to a strange alien planet."
+      "Neocade is a small indie studio based out of Seattle, Washington. We handled the development and release of Hiveswap: Act 1.",
+      "Hiveswap: Act 1 is a point-and-click adventure game developed by What Pumpkin Games, released on Steam in September 2017. Set in the Homestuck universe, it follows Joey Claire, a young girl transported to a strange alien planet.",
     ],
     contributions: [
-      "As a Gameplay Programmer on the team, I was responsible for developing key game features, working with game designers and bringing artist's visions to life!",
-      "During my time working on game I worked on implementing Finite-State machine for the combat AI. With so many items being possible to have in the combat sequences, called Strifes, if was vital to having a system for easily adding new interactions. I developed a robust method of implementing new combos. Utilizing Unity's Scriptable Objects and custom editors I created a simple and sleek way to extend the functionality of the battle system. Other than just the combinations the battle sequences also includes audio, animations and playing cutscenes before and after the fight.",
-      "Along side my work on the Strifes I was responsible for implementing item interactions with the world, laying out scenes for play navigation, implementing player progression, a few other minor puzzles and bug fixes through the code base.",
+      "As a Gameplay Programmer, I developed key game features, working closely with designers and bringing artists' visions to life.",
+      "A major focus was implementing a finite-state machine for the combat AI. The combat sequences — called Strifes — supported a wide variety of item combinations, so it was vital to have a system that made adding new interactions straightforward. Using Unity's Scriptable Objects and custom editors, I created a clean, extensible way to build out the battle system, including audio, animations, and cutscenes before and after each fight.",
+      "Alongside the Strifes, I implemented item interactions with the world, laid out scenes for player navigation, built player progression systems, and tackled various puzzles and bug fixes across the codebase.",
     ]
   },
   {
