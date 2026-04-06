@@ -9,7 +9,7 @@ export const projects: Project[] = [
     url: "https://www.propriovision.com/paradigm",
   },
   {
-    title: "Maintence Sythentic Trainer",
+    title: "Maintenance Sythentic Trainer",
     description:
       "Training simulation for aircraft mechanics to learn about fixing various issues across four aircraft models.",
     image: "/projects/mstcover.png",
